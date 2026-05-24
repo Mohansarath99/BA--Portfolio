@@ -11,7 +11,7 @@
 
 Senior Business Analyst with 5+ years of experience delivering end-to-end technology and data solutions across Banking, Financial Services, and Insurance. I specialize in requirements engineering, Salesforce implementations, data migration projects, Agile delivery, and stakeholder management.
 
-This portfolio showcases real project work from my career — including a full On-Premise to Cloud Migration project I led at Home Equity Bank, covering every phase from BRD through UAT sign-off.
+This portfolio showcases real project work from my career including a full On-Premise to Cloud Migration project I led at Home Equity Bank, covering every phase from BRD through UAT sign-off.
 
 ---
 
