@@ -1,3 +1,5 @@
+![Banner](Banner.png.png)
+
 # Mohan Sarath Ayinabathini
 ### Senior Business Analyst | Banking & Financial Services | Toronto, ON
 
