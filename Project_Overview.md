@@ -7,7 +7,7 @@
 
 When I joined Home Equity Bank in September 2025, the lead management process was almost entirely manual. Marketing would generate leads from campaigns, an admin would forward them by email to sales reps, and reps would track everything in personal spreadsheets. There was no central system, no assignment rules, and management had zero real-time visibility into pipeline.
 
-The bank had been planning a Salesforce migration for about a year before I came in, but it kept getting deprioritized. My first few weeks were spent understanding why — turns out the main blocker was nobody had properly documented what the business actually needed. There was a rough scope document from a vendor kickoff meeting, but nothing that could actually drive development.
+The bank had been planning a Salesforce migration for about a year before I came in, but it kept getting deprioritized. My first few weeks were spent understanding why  turns out the main blocker was nobody had properly documented what the business actually needed. There was a rough scope document from a vendor kickoff meeting, but nothing that could actually drive development.
 
 So we started from scratch on the requirements side.
 
@@ -38,14 +38,14 @@ I was the only BA on the project for the first 3 months. A junior BA joined in S
 **What's not included (pushed to Phase 2):**
 - Mobile app integration
 - Third-party data provider feeds
-- Historical inactive records (pre-2018) — these were archived, not migrated
+- Historical inactive records (pre-2018)  these were archived, not migrated
 - Advanced AI-based lead scoring (vendor demo showed promise but wasn't ready)
 
 ---
 
 ## What Made This Project Harder Than Expected
 
-**Data quality.** The legacy system had been running for over 10 years with no governance. When we profiled the source data, we found roughly 18% of records had at least one issue — missing fields, formatting inconsistencies, duplicates. We'd budgeted two weeks for data cleansing. It took four. That pushed Sprint 3 delivery out by nearly two weeks and required a scope conversation with the project sponsor.
+**Data quality.** The legacy system had been running for over 10 years with no governance. When we profiled the source data, we found roughly 18% of records had at least one issue  missing fields, formatting inconsistencies, duplicates. We'd budgeted two weeks for data cleansing. It took four. That pushed Sprint 3 delivery out by nearly two weeks and required a scope conversation with the project sponsor.
 
 **Stakeholder availability.** Getting five stakeholders to agree on requirements is never easy, especially when Sales and Compliance have different priorities. The Sales team wanted speed and simplicity. Compliance wanted audit trails and access controls. We spent more time than I'd have liked negotiating the access control model, but we got there.
 
