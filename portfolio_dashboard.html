@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mohan Sarath — BA Portfolio</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f8f8f6;color:#1a1a1a;padding:24px}
+.fade-up{opacity:0;transform:translateY(32px);transition:opacity .7s ease,transform .7s ease}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+.fade-up.d1{transition-delay:.1s}.fade-up.d2{transition-delay:.2s}.fade-up.d3{transition-delay:.3s}.fade-up.d4{transition-delay:.45s}
+.bar-fill{width:0;transition:width 1.3s cubic-bezier(.4,0,.2,1)}
+.tnode{opacity:0;transform:scale(.6);transition:opacity .5s ease,transform .5s ease}
+.tnode.visible{opacity:1;transform:scale(1)}
+.snode{opacity:0;transform:scale(.5);transition:opacity .4s ease,transform .4s ease}
+.snode.visible{opacity:1;transform:scale(1)}
+.section{margin-bottom:36px;max-width:900px;margin-left:auto;margin-right:auto}
+.section-title{font-size:13px;font-weight:600;color:#1a1a1a;margin-bottom:12px;padding-bottom:6px;border-bottom:1px solid #e0ded6}
+.card{background:#fff;border:0.5px solid #e0ded6;border-radius:12px;padding:16px}
+.kpi-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.kpi-card{background:#f4f3ee;border-radius:8px;padding:14px}
+.kpi-label{font-size:11px;color:#73726c;margin-bottom:4px}
+.kpi-val{font-size:22px;font-weight:600;color:#1a1a1a}
+.kpi-sub{font-size:11px;color:#3B6D11;margin-top:4px}
+.bar-row{display:grid;grid-template-columns:110px 1fr 52px;align-items:center;gap:10px;margin-bottom:10px}
+.bar-track{background:#f1efe8;border-radius:4px;height:18px;overflow:hidden}
+.tl-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:6px;position:relative;padding-top:4px}
+.tl-line{position:absolute;top:20px;left:20px;right:20px;height:2px;background:#e0ded6}
+.tl-dot{width:40px;height:40px;border-radius:50%;margin:0 auto 8px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;border:2px solid}
+.sk-card{border-radius:8px;padding:12px;text-align:center;border:0.5px solid;margin-bottom:8px}
+.proc-step{padding:8px 10px;margin-bottom:6px;border-radius:6px;font-size:11px;line-height:1.5}
+@media(max-width:600px){.kpi-grid{grid-template-columns:repeat(2,1fr)}.tl-grid{grid-template-columns:repeat(3,1fr)}}
+</style>
+</head>
+<body>
+
+<div style="max-width:900px;margin:0 auto">
+
+<!-- BANNER -->
+<div class="fade-up" style="background:#0F2D4E;border-radius:12px;padding:28px 32px;margin-bottom:32px;position:relative;overflow:hidden">
+  <div style="position:absolute;left:0;top:0;bottom:0;width:4px;background:#3B9EFF;border-radius:4px 0 0 4px"></div>
+  <p style="font-size:26px;font-weight:700;color:#fff;margin:0 0 4px">Mohan Sarath Ayinabathini</p>
+  <p style="font-size:14px;color:#7EC8FF;margin:0 0 14px">Senior Business Analyst · Banking & Financial Services · Toronto, ON</p>
+  <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px">
+    <span style="background:#1A4A70;color:#7EC8FF;font-size:11px;padding:4px 12px;border-radius:20px">Banking & Finance</span>
+    <span style="background:#1A4A70;color:#7EC8FF;font-size:11px;padding:4px 12px;border-radius:20px">Salesforce</span>
+    <span style="background:#1A4A70;color:#7EC8FF;font-size:11px;padding:4px 12px;border-radius:20px">Agile / Scrum</span>
+    <span style="background:#1A4A70;color:#7EC8FF;font-size:11px;padding:4px 12px;border-radius:20px">SQL</span>
+    <span style="background:#1A4A70;color:#7EC8FF;font-size:11px;padding:4px 12px;border-radius:20px">Power BI</span>
+    <span style="background:#1A4A70;color:#7EC8FF;font-size:11px;padding:4px 12px;border-radius:20px">5+ Years Experience</span>
+  </div>
+  <p style="font-size:11px;color:#AACCEE">mohansarath99@outlook.com · Toronto, ON · Open to opportunities</p>
+</div>
+
+<!-- KPI COUNTERS -->
+<div class="section">
+  <p class="section-title">Project outcomes — CRM migration · Home Equity Bank</p>
+  <div class="kpi-grid" id="kpi-grid">
+    <div class="kpi-card fade-up d1"><p class="kpi-label">Records migrated</p><p class="kpi-val" id="c1">0</p><p class="kpi-sub">of 48,900 active</p></div>
+    <div class="kpi-card fade-up d2"><p class="kpi-label">Data quality score</p><p class="kpi-val" id="c2">0%</p><p class="kpi-sub">up from ~70% pre-migration</p></div>
+    <div class="kpi-card fade-up d3"><p class="kpi-label">UAT pass rate</p><p class="kpi-val" id="c3">0%</p><p class="kpi-sub">4 defects resolved pre go-live</p></div>
+    <div class="kpi-card fade-up d4"><p class="kpi-label">Lead response time</p><p class="kpi-val" id="c4">72 hrs</p><p class="kpi-sub">reduced from 48–72 hrs</p></div>
+  </div>
+</div>
+
+<!-- SPRINT VELOCITY BARS -->
+<div class="section">
+  <p class="section-title">Sprint velocity & project metrics</p>
+  <div class="card">
+    <div class="bar-row fade-up d1" data-bar="84"><span style="font-size:12px;color:#73726c">Sprint 3</span><div class="bar-track"><div class="bar-fill" style="height:100%;background:#E24B4A;border-radius:4px"></div></div><span style="font-size:12px;color:#73726c;text-align:right">84%</span></div>
+    <div class="bar-row fade-up d2" data-bar="93"><span style="font-size:12px;color:#73726c">Sprint 4</span><div class="bar-track"><div class="bar-fill" style="height:100%;background:#185FA5;border-radius:4px"></div></div><span style="font-size:12px;color:#73726c;text-align:right">93%</span></div>
+    <div class="bar-row fade-up d3" data-bar="91"><span style="font-size:12px;color:#73726c">Sprint 5</span><div class="bar-track"><div class="bar-fill" style="height:100%;background:#185FA5;border-radius:4px"></div></div><span style="font-size:12px;color:#73726c;text-align:right">91%</span></div>
+    <div class="bar-row fade-up d1" data-bar="96"><span style="font-size:12px;color:#73726c">Data quality</span><div class="bar-track"><div class="bar-fill" style="height:100%;background:#1D9E75;border-radius:4px"></div></div><span style="font-size:12px;color:#73726c;text-align:right">96.2%</span></div>
+    <div class="bar-row fade-up d2" data-bar="93"><span style="font-size:12px;color:#73726c">UAT pass rate</span><div class="bar-track"><div class="bar-fill" style="height:100%;background:#534AB7;border-radius:4px"></div></div><span style="font-size:12px;color:#73726c;text-align:right">93.2%</span></div>
+    <p style="font-size:11px;color:#73726c;margin-top:8px">Sprint 3 extended 8 days — source data quality higher than estimated from initial 5% sample profile</p>
+  </div>
+</div>
+
+<!-- TIMELINE -->
+<div class="section">
+  <p class="section-title">Project timeline — Sep 2025 to Mar 2026</p>
+  <div class="card">
+    <div class="tl-grid">
+      <div class="tl-line"></div>
+      <div style="text-align:center" class="tnode"><div class="tl-dot" style="background:#B5D4F4;border-color:#185FA5;color:#0C447C">1</div><p style="font-size:11px;font-weight:600;color:#1a1a1a">Initiation</p><p style="font-size:10px;color:#73726c">Sep 2025</p></div>
+      <div style="text-align:center" class="tnode" style2="transition-delay:.15s"><div class="tl-dot" style="background:#B5D4F4;border-color:#185FA5;color:#0C447C">2</div><p style="font-size:11px;font-weight:600;color:#1a1a1a">BRD + FRD</p><p style="font-size:10px;color:#73726c">Oct 2025</p></div>
+      <div style="text-align:center" class="tnode"><div class="tl-dot" style="background:#FAECE7;border-color:#D85A30;color:#712B13">3</div><p style="font-size:11px;font-weight:600;color:#1a1a1a">Sprint 3</p><p style="font-size:10px;color:#E24B4A">Extended</p></div>
+      <div style="text-align:center" class="tnode"><div class="tl-dot" style="background:#B5D4F4;border-color:#185FA5;color:#0C447C">4</div><p style="font-size:11px;font-weight:600;color:#1a1a1a">Sprint 4</p><p style="font-size:10px;color:#73726c">Feb 2026</p></div>
+      <div style="text-align:center" class="tnode"><div class="tl-dot" style="background:#CECBF6;border-color:#534AB7;color:#26215C">5</div><p style="font-size:11px;font-weight:600;color:#1a1a1a">Sprint 5</p><p style="font-size:10px;color:#73726c">UAT</p></div>
+      <div style="text-align:center" class="tnode"><div class="tl-dot" style="background:#C0DD97;border-color:#639922;color:#173404">GO</div><p style="font-size:11px;font-weight:600;color:#1a1a1a">Go-live</p><p style="font-size:10px;color:#3B6D11">Mar 10</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- STAKEHOLDER MAP -->
+<div class="section">
+  <p class="section-title">Stakeholder engagement map</p>
+  <div class="card">
+    <div style="display:grid;grid-template-columns:1fr 160px 1fr;gap:12px;align-items:center">
+      <div>
+        <div class="sk-card snode" style="background:#E6F1FB;border-color:#85B7EB"><p style="font-size:12px;font-weight:600;color:#0C447C">VP Sales</p><p style="font-size:11px;color:#185FA5">Project sponsor</p></div>
+        <div class="sk-card snode" style="background:#EEEDFE;border-color:#AFA9EC"><p style="font-size:12px;font-weight:600;color:#26215C">Product owner</p><p style="font-size:11px;color:#534AB7">Backlog priorities</p></div>
+        <div class="sk-card snode" style="background:#FAECE7;border-color:#F0997B"><p style="font-size:12px;font-weight:600;color:#4A1B0C">Compliance</p><p style="font-size:11px;color:#993C1D">Access + audit</p></div>
+      </div>
+      <div class="snode" style="text-align:center">
+        <div style="width:100px;height:100px;border-radius:50%;background:#E6F1FB;border:3px solid #185FA5;margin:0 auto 8px;display:flex;align-items:center;justify-content:center;flex-direction:column">
+          <p style="font-size:11px;font-weight:600;color:#0C447C;line-height:1.3">Mohan<br>Sarath</p>
+          <p style="font-size:10px;color:#185FA5">Senior BA</p>
+        </div>
+      </div>
+      <div>
+        <div class="sk-card snode" style="background:#E1F5EE;border-color:#5DCAA5"><p style="font-size:12px;font-weight:600;color:#04342C">IT lead</p><p style="font-size:11px;color:#0F6E56">Tech delivery</p></div>
+        <div class="sk-card snode" style="background:#E1F5EE;border-color:#5DCAA5"><p style="font-size:12px;font-weight:600;color:#04342C">Data governance</p><p style="font-size:11px;color:#0F6E56">Data quality</p></div>
+        <div class="sk-card snode" style="background:#f1efe8;border-color:#B4B2A9"><p style="font-size:12px;font-weight:600;color:#2C2C2A">End users</p><p style="font-size:11px;color:#5F5E5A">~115 sales reps</p></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- AS-IS VS TO-BE -->
+<div class="section">
+  <p class="section-title">Lead management — AS-IS vs TO-BE process</p>
+  <div style="display:grid;grid-template-columns:minmax(0,1fr) 50px minmax(0,1fr);gap:8px;align-items:start">
+    <div>
+      <div style="background:#FCEBEB;border:0.5px solid #F09595;border-radius:8px;padding:10px;margin-bottom:8px;text-align:center"><p style="font-size:12px;font-weight:600;color:#A32D2D">AS-IS — manual process</p></div>
+      <div class="proc-step fade-up d1" style="background:#FEF9F8;border:0.5px solid #F0997B;color:#4A1B0C">Campaign → admin emails rep<br><span style="font-size:10px;color:#993C1D">up to 24 hrs delay</span></div>
+      <div class="proc-step fade-up d2" style="background:#FEF9F8;border:0.5px solid #F09595;color:#501313">Rep enters data in spreadsheet<br><span style="font-size:10px;color:#A32D2D">~30% error rate</span></div>
+      <div class="proc-step fade-up d3" style="background:#FEF9F8;border:0.5px solid #F09595;color:#501313">Manager waits for Friday email<br><span style="font-size:10px;color:#A32D2D">no real-time visibility</span></div>
+      <div class="proc-step fade-up d4" style="background:#F7C1C1;border:0.5px solid #E24B4A;color:#501313;font-weight:600;text-align:center">~12% conversion rate</div>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:center;padding-top:60px">
+      <div style="text-align:center"><div style="font-size:18px;color:#73726c">→</div><p style="font-size:10px;color:#73726c;margin-top:4px">gap</p></div>
+    </div>
+    <div>
+      <div style="background:#EAF3DE;border:0.5px solid #97C459;border-radius:8px;padding:10px;margin-bottom:8px;text-align:center"><p style="font-size:12px;font-weight:600;color:#3B6D11">TO-BE — Salesforce automated</p></div>
+      <div class="proc-step fade-up d1" style="background:#F4FAF0;border:0.5px solid #97C459;color:#173404">Auto-captured from web form<br><span style="font-size:10px;color:#3B6D11">within 30 seconds</span></div>
+      <div class="proc-step fade-up d2" style="background:#F4FAF0;border:0.5px solid #97C459;color:#173404">Rules-based auto-assignment<br><span style="font-size:10px;color:#3B6D11">under 5% error rate</span></div>
+      <div class="proc-step fade-up d3" style="background:#F4FAF0;border:0.5px solid #97C459;color:#173404">Live Power BI dashboard<br><span style="font-size:10px;color:#3B6D11">real-time visibility</span></div>
+      <div class="proc-step fade-up d4" style="background:#C0DD97;border:0.5px solid #639922;color:#173404;font-weight:600;text-align:center">~17–18% conversion rate</div>
+    </div>
+  </div>
+</div>
+
+<p style="font-size:11px;color:#73726c;text-align:center;margin-top:8px;max-width:900px;margin-left:auto;margin-right:auto">Mohan Sarath Ayinabathini · Senior BA · mohansarath99@outlook.com · Toronto, ON</p>
+</div>
+
+<script>
+function counter(el,target,suffix,dur){
+  let v=0,step=target/(dur/16);
+  const t=setInterval(()=>{
+    v+=step;
+    if(v>=target){v=target;clearInterval(t);}
+    if(suffix==='%') el.textContent=v.toFixed(1)+'%';
+    else el.textContent=Math.round(v).toLocaleString();
+  },16);
+}
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(!e.isIntersecting)return;
+    e.target.classList.add('visible');
+    const br=e.target.querySelector('.bar-fill');
+    if(br) setTimeout(()=>{br.style.width=e.target.dataset.bar+'%';},120);
+    obs.unobserve(e.target);
+  });
+},{threshold:0.15});
+document.querySelectorAll('.fade-up,.tnode,.snode,.bar-row').forEach(el=>obs.observe(el));
+const kpiObs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(!e.isIntersecting)return;
+    setTimeout(()=>counter(document.getElementById('c1'),48847,'',1800),200);
+    setTimeout(()=>counter(document.getElementById('c2'),96.2,'%',1800),350);
+    setTimeout(()=>counter(document.getElementById('c3'),93.2,'%',1800),500);
+    setTimeout(()=>{document.getElementById('c4').textContent='< 3 hrs';},1300);
+    kpiObs.unobserve(e.target);
+  });
+},{threshold:0.2});
+kpiObs.observe(document.getElementById('kpi-grid'));
+</script>
+</body>
+</html>
