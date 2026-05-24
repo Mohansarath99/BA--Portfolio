@@ -1,6 +1,4 @@
 # Functional Requirements Document (FRD)
-## Lead Management — Salesforce Implementation
-# Functional Requirements Document (FRD)
 
 ## Lead Management — Salesforce Implementation
 
@@ -13,9 +11,11 @@
 
 ## 1. Overview
 
-This document defines the functional requirements for the Lead Management module within Salesforce. It translates the approved business requirements into system-level behavior, workflows, and data handling logic.
+This document captures the functional requirements for the Lead Management module implemented in Salesforce as part of the CRM migration initiative.
 
-The goal is to automate lead capture, assignment, follow-up, and tracking to eliminate manual processes and improve response time and conversion rates.
+The objective of this module is to replace the existing manual lead handling process — where leads were distributed via email and tracked in spreadsheets — with an automated, rules-driven system for lead capture, assignment, and follow-up.
+
+These requirements are based on stakeholder workshops conducted with Sales, IT, and Compliance teams and align with the approved Business Requirements Document (BRD).
 
 ---
 
@@ -23,18 +23,17 @@ The goal is to automate lead capture, assignment, follow-up, and tracking to eli
 
 ### In Scope
 
-* Web form lead capture
+* Web form lead capture and API integration
 * Lead creation in Salesforce
-* Territory-based assignment rules
-* Product-based routing (Mortgage / HELOC)
+* Territory-based and product-based assignment rules
 * Notification and follow-up automation
-* Duplicate detection
-* Fallback routing logic
-* Audit logging
+* Duplicate detection and flagging
+* Fallback routing logic for unmatched leads
+* Audit logging for compliance and traceability
 
 ### Out of Scope
 
-* AI lead scoring (Phase 2)
+* AI-based lead scoring (Phase 2)
 * Third-party integrations beyond web forms
 * Mobile-specific UI enhancements
 
@@ -42,16 +41,27 @@ The goal is to automate lead capture, assignment, follow-up, and tracking to eli
 
 ## 3. System Overview
 
-Leads originate from external web forms and are submitted via API into Salesforce.
+Leads originate from external web forms and are submitted into Salesforce via API integration.
 
-Processing flow:
+### Processing Flow:
 
 1. User submits web form
-2. Validation executed
-3. Lead created in Salesforce
-4. Assignment rules triggered
-5. Notification + follow-up task generated
-6. Lead available for reporting/dashboard
+2. System validates input data
+3. Lead record created in Salesforce
+4. Assignment rules executed
+5. Notifications triggered
+6. Follow-up task generated
+7. Lead becomes available for reporting and dashboards
+
+---
+
+## 3.1 Key Design Considerations
+
+* Data profiling identified ~18% data quality issues in the source system, influencing validation rules at entry
+* Compliance (PIPEDA) required strict audit logging and role-based access controls
+* Sales stakeholders required rapid lead turnaround (target < 60 seconds for assignment)
+* Edge cases such as PO Box addresses required fallback routing to prevent lead loss
+* System designed to ensure zero lead loss even during API failures
 
 ---
 
@@ -60,27 +70,30 @@ Processing flow:
 ### 4.1 Lead Capture
 
 * System shall accept lead data from website forms via API
-
 * Lead record must be created within **45 seconds**
 
-* Mandatory fields:
+#### Mandatory Fields:
 
-  * First Name
-  * Last Name
-  * Email
-  * Phone
-  * Product Interest
+* First Name
+* Last Name
+* Email
+* Phone
+* Product Interest
+
+#### Validation Rules:
 
 * If mandatory fields are missing:
 
-  * Submission rejected
-  * User receives error message
+  * Submission is rejected
+  * User receives a clear error message
+
+#### API Failure Handling:
 
 * If Salesforce API is unavailable:
 
-  * Request queued
-  * Retry logic applied
-  * No data loss permitted
+  * Submission is queued
+  * Retry logic is applied
+  * No data loss is permitted
 
 ---
 
@@ -99,12 +112,12 @@ Processing flow:
 
 ### 4.3 Duplicate Detection
 
-* Duplicate check triggered on **email**
-* If duplicate found:
+* Duplicate check triggered based on **email address**
+* If duplicate detected:
 
-  * System flags the record
-  * Lead still created (non-blocking)
-  * Flag visible to sales rep
+  * Record is flagged
+  * Lead creation is not blocked
+  * Flag is visible to the assigned sales rep
 
 ---
 
@@ -112,12 +125,12 @@ Processing flow:
 
 #### Territory-Based Routing
 
-* Based on postal code:
+Based on postal code:
 
-  * Toronto Core
-  * GTA
-  * Ontario-Wide
-  * National
+* Toronto Core
+* GTA
+* Ontario-Wide
+* National
 
 #### Product-Based Routing
 
@@ -126,125 +139,124 @@ Processing flow:
 
 #### Fallback Logic
 
-* If no rule match:
+* If no assignment rule matches:
 
-  * Route to Manager Queue
-* If PO Box / invalid postal code:
+  * Route lead to Manager Queue
+* If invalid postal code or PO Box detected:
 
   * Route to Manager Queue
 
 #### Performance Requirement
 
-* Assignment must complete within **60 seconds**
+* Assignment must complete within **60 seconds of lead creation**
 
 ---
 
 ### 4.5 Notifications
 
-* On assignment:
+* Upon assignment:
 
-  * Email notification sent to rep
+  * Email notification sent to assigned rep
   * In-app notification triggered
 
-* SLA:
+#### SLA:
 
-  * Notification delivered within 60 seconds
+* Notifications must be delivered within **60 seconds**
 
 ---
 
 ### 4.6 Follow-Up Automation
 
-* Task auto-created upon assignment
-* Default due date: **24 hours**
-* Reminder email: **2 hours before due time**
+* Follow-up task automatically created upon assignment
+* Default due date: **24 hours from assignment**
+* Reminder email sent **2 hours before due time**
 
 ---
 
 ### 4.7 Audit Logging
 
-System must log:
+System must log the following:
 
 * Lead creation timestamp
 * Assignment timestamp
 * Assigned user
-* Source of lead
+* Lead source
+* Status changes (if applicable)
 
 ---
 
 ### 4.8 Error Handling
 
-| Scenario           | System Behavior        |
-| ------------------ | ---------------------- |
-| API failure        | Queue and retry        |
-| Missing fields     | Reject submission      |
-| Assignment failure | Route to manager queue |
-| Notification delay | Retry notification     |
+| Scenario                 | System Behavior              |
+| ------------------------ | ---------------------------- |
+| API failure              | Queue and retry submission   |
+| Missing mandatory fields | Reject submission with error |
+| Assignment failure       | Route to Manager Queue       |
+| Notification delay       | Retry notification delivery  |
 
 ---
 
 ## 5. Reporting Impact
 
-The following data must be available for dashboards:
+The system must support the following reporting metrics:
 
-* Total leads
+* Total leads created
 * Assigned vs unassigned leads
 * Conversion rate
-* Response time
+* Average response time
 * Lead source distribution
-* Territory-based performance
+* Territory-based performance metrics
 
 ---
 
 ## 6. Assumptions
 
-* Salesforce licenses available for all users
+* Salesforce licenses provisioned for all users
 * API integration between web forms and Salesforce is stable
-* Postal code mapping provided by business
-* Data cleansing completed before go-live
+* Postal code mapping provided by business stakeholders
+* Data cleansing completed prior to migration load
 
 ---
 
 ## 7. Constraints
 
-* Must comply with PIPEDA
-* Cannot impact ongoing sales operations
-* SLA targets must be met under peak load
+* Must comply with PIPEDA and internal compliance policies
+* Cannot disrupt ongoing sales operations during migration
+* SLA targets must be maintained under peak load conditions
 
 ---
 
 ## 8. Acceptance Criteria (Summary)
 
 * Lead created within 45 seconds ✅
-* Assignment within 60 seconds ✅
+* Assignment completed within 60 seconds ✅
 * No data loss during API failure ✅
-* Duplicate detection working (non-blocking) ✅
-* Notifications triggered correctly ✅
-* Fallback routing functioning ✅
+* Duplicate detection functioning correctly (non-blocking) ✅
+* Notifications triggered within SLA ✅
+* Fallback routing working for edge cases ✅
 
 ---
 
 ## 9. Traceability
 
-| BRD ID | FRD Section         |
-| ------ | ------------------- |
-| BR-001 | Lead Capture        |
-| BR-003 | Assignment Rules    |
-| BR-004 | Notifications       |
-| BR-005 | Follow-Up           |
-| BR-006 | Duplicate Detection |
-| BR-007 | Fallback Routing    |
+| BRD ID | FRD Section          |
+| ------ | -------------------- |
+| BR-001 | Lead Capture         |
+| BR-003 | Assignment Rules     |
+| BR-004 | Notifications        |
+| BR-005 | Follow-Up Automation |
+| BR-006 | Duplicate Detection  |
+| BR-007 | Fallback Routing     |
 
 ---
 
 ## 10. Sign-Off
 
-| Role             | Status     |
-| ---------------- | ---------- |
-| Business Analyst | Approved ✅ |
-| Product Owner    | Approved ✅ |
-| IT Lead          | Approved ✅ |
-| Compliance       | Approved ✅ |
+| Role               | Status     |
+| ------------------ | ---------- |
+| Business Analyst   | Approved ✅ |
+| Product Owner      | Approved ✅ |
+| IT Lead            | Approved ✅ |
+| Compliance Officer | Approved ✅ |
 
 ---
-
-(Project content as provided earlier...)
