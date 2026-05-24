@@ -49,9 +49,25 @@ I use this space to share BA templates, SQL samples, and process documentation t
 
 ![Process Flow](process_flow.png.png)
 
+This diagram highlights inefficiencies in the current (AS-IS) process, including manual data entry and lack of real-time visibility.
+
+The TO-BE process introduces automation through Salesforce, improving data accuracy, reducing manual effort, and increasing lead conversion rates from ~12% to ~20%.
+
 ## 📈 Dashboard
 
 ![Dashboard](dashboard.png)
+## Key Insights from Dashboard
+
+- Lead conversion rate shows consistent improvement after automation
+- Manual processing delays were directly impacting sales performance
+- Real-time reporting enabled faster decision-making
+
+## Business Recommendation
+
+- Implement automated lead assignment rules
+- Introduce validation checks to reduce data errors
+- Use dashboards for continuous performance monitoring
+
 
 ## 📁 Repository Guide
 
