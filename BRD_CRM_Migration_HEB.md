@@ -7,8 +7,6 @@
 **Status:** Approved — October 22, 2025
 **Last Updated:** November 3, 2025 (v1.4 — scope clarification on access control)
 
-> **Note:** Version 1.3 was rejected at the first review because the access control requirements weren't specific enough. The Compliance team flagged this and we had to go back and run an additional workshop before v1.4 was signed off. Lesson learned — involve Compliance earlier in the process.
-
 ---
 
 ## 1. Why We're Doing This
