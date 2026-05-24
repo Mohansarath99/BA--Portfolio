@@ -66,13 +66,22 @@ I use this space to share BA templates, SQL samples, and process documentation t
 
 ## 📊 GitHub Stats
 
-![Mohan's GitHub Stats](https://github-readme-stats.vercel.app/api?username=mohansarath&show_icons=true&theme=default)
+![Profile Views](https://komarev.com/ghpvc/?username=Mohansarath99&color=blue&style=flat)
+
+![SQL](https://img.shields.io/badge/SQL-Advanced-blue)
+![Salesforce](https://img.shields.io/badge/Salesforce-Expert-00A1E0)
+![Power BI](https://img.shields.io/badge/Power%20BI-Intermediate-F2C811)
+![Agile](https://img.shields.io/badge/Agile%2FScrum-Expert-green)
+![Excel](https://img.shields.io/badge/Excel-Advanced-217346)
+![SSRS](https://img.shields.io/badge/SSRS-Intermediate-orange)
+
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Mohansarath99&layout=compact)
 
 ---
 
 ## 🤝 Let's Connect
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://linkedin.com/in/mohansarath)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://linkedin.com/in/mohansarath99)
 [![Email](https://img.shields.io/badge/Email-mohansarath99%40outlook.com-red)](mailto:mohansarath99@outlook.com)
 
 ---
