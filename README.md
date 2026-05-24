@@ -57,10 +57,11 @@ I use this space to share BA templates, SQL samples, and process documentation t
 
 | Repository | Description |
 |---|---|
-| [`BA-Templates`](./BA_Templates/) | BRD, FRD, User Story & UAT templates |
-| [`SQL-Samples`](./SQL_Samples/) | Real-world SQL queries for data analysis & reporting |
-| [`Process-Documentation`](./Process_Documentation/) | AS-IS / TO-BE process flows and gap analysis samples |
-| [`Agile-Artifacts`](./Agile_Artifacts/) | Epic, User Story, and Sprint planning templates |
+| [BRD_Template.md](./BRD_Template.md) | Business Requirements Document template |
+| [UAT_Test_Plan_Template.md](./UAT_Test_Plan_Template.md) | UAT test plan & test cases |
+| [User_Story_Templates.md](./User_Story_Templates.md) | Epic, User Story & Sprint templates |
+| [BA_SQL_Queries.sql](./BA_SQL_Queries.sql) | Real-world SQL queries for data analysis |
+| [AS_IS_TO_BE_Analysis.md](./AS_IS_TO_BE_Analysis.md) | AS-IS / TO-BE process flow & gap analysis |
 
 ---
 
