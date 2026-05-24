@@ -5,9 +5,9 @@
 
 ---
 
-I'm a Senior Business Analyst with 5+ years of experience working across Banking, Financial Services, and Insurance. Most of my work has been in Agile delivery environments — writing requirements, running stakeholder workshops, coordinating UAT, and making sure what gets built actually matches what the business asked for.
+I'm a Senior Business Analyst with 5+ years of experience working across Banking, Financial Services, and Insurance. Most of my work has been in Agile delivery environments  writing requirements, running stakeholder workshops, coordinating UAT, and making sure what gets built actually matches what the business asked for.
 
-I put this portfolio together to share some of the BA work I do day to day — requirements docs, user stories, SQL I use for data validation, and a project case study from a CRM migration I've been leading at Home Equity Bank. Nothing here is theoretical — these are artifacts from real work, cleaned up and shared for reference.
+I put this portfolio together to share some of the BA work I do day to day  requirements docs, user stories, SQL I use for data validation, and a project case study from a CRM migration I've been leading at Home Equity Bank. Nothing here is theoretical  these are artifacts from real work, cleaned up and shared for reference.
 
 ---
 
@@ -20,7 +20,7 @@ I put this portfolio together to share some of the BA work I do day to day — r
 
 We're mid-way through migrating a legacy on-premise customer system to Salesforce. It's been a bigger lift than originally scoped — the source data quality was worse than anyone expected, which pushed us to add a dedicated cleansing sprint before we could start the migration load. That slowed Sprint 3 down but saved us from a messy go-live.
 
-I'm responsible for the full BA workstream — BRD through UAT — across a team of about 15 people including developers, a Salesforce architect, QA, and 6 business stakeholders.
+I'm responsible for the full BA workstream — BRD through UAT  across a team of about 15 people including developers, a Salesforce architect, QA, and 6 business stakeholders.
 
 ---
 
