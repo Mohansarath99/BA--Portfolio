@@ -1,3 +1,5 @@
+![Banner](Banner.png.png)
+
 # Hi, I'm Mohan Sarath 👋
 
 ### Senior Business Analyst | Banking & Financial Services | Toronto, ON
@@ -42,6 +44,14 @@ I use this space to share BA templates, SQL samples, and process documentation t
 | Project Tools | MS Project, MS Office Suite |
 
 ---
+
+## 📊 Process Flow
+
+![Process Flow](process_flow.png.png)
+
+## 📈 Dashboard
+
+![Dashboard](dashboard.png)
 
 ## 📁 Repository Guide
 
