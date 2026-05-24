@@ -1,7 +1,7 @@
 # Mohan Sarath Ayinabathini
 ### Senior Business Analyst | Banking & Financial Services | Toronto, ON
 
-📧 mohansarath99@outlook.com &nbsp;|&nbsp; 📍 Toronto, ON &nbsp;|&nbsp; 🔗 [LinkedIn](https://linkedin.com/in/mohansarath)
+📧 mohansarath99@outlook.com &nbsp;|&nbsp; 📍 Toronto, ON &nbsp;|&nbsp; 🔗 [LinkedIn](https://https://www.linkedin.com/in/mohansarath99)
 
 ---
 
