@@ -28,7 +28,7 @@ I'm responsible for the full BA workstream — BRD through UAT  across a team of
 
 Click below to view the animated project dashboard:
 
-[View Animated Portfolio Dashboard](https://mohansarath99.github.io/BA--Portfolio/portfolio_preview.html)
+[View Animated Portfolio Dashboard](https://mohansarath99.github.io/BA--Portfolio/portfolio_dashboard.html)
 
 ---
 
