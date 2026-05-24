@@ -1,33 +1,15 @@
 # Mohan Sarath Ayinabathini
 ### Senior Business Analyst | Banking & Financial Services | Toronto, ON
 
-📧 mohansarath99@outlook.com &nbsp;|&nbsp; 📍 Toronto, ON &nbsp;|&nbsp; 🔗 [LinkedIn](https://linkedin.com/in/mohansarath) &nbsp;|&nbsp; 💼 Open to opportunities
+📧 mohansarath99@outlook.com &nbsp;|&nbsp; 📍 Toronto, ON &nbsp;|&nbsp; 🔗 [LinkedIn](https://linkedin.com/in/mohansarath)
 
 ---
 
 I'm a Senior Business Analyst with 5+ years of experience working across Banking, Financial Services, and Insurance. Most of my work has been in Agile delivery environments — writing requirements, running stakeholder workshops, coordinating UAT, and making sure what gets built actually matches what the business asked for.
 
-I put this portfolio together to share some of the BA work I do day to day — requirements docs, user stories, SQL I use for data validation, and a project case study from a CRM migration I've been leading at Home Equity Bank. Nothing here is theoretical — these are artifacts from real work, cleaned up and shared for reference.
+This portfolio covers a CRM migration project I've been leading at Home Equity Bank since September 2025 — from BRD through UAT sign-off. Everything here is from real work.
 
 ---
-
-## 🎯 Animated Project Dashboard
-
-> **Scroll through the interactive dashboard below — project outcomes, sprint velocity, timeline, stakeholder map, and process transformation all in one place.**
-
-<div align="center">
-
-<a href="https://mohansarath99.github.io/BA--Portfolio/portfolio_dashboard.html">
-  <img src="https://img.shields.io/badge/View%20Full%20Animated%20Dashboard-185FA5?style=for-the-badge&logo=github&logoColor=white" alt="View Dashboard"/>
-</a>
-
-</div>
-
----
-
-<!-- ANIMATED PORTFOLIO SECTION -->
-<!-- The portfolio_dashboard.html file contains all animations -->
-<!-- View it at: https://mohansarath99.github.io/BA--Portfolio/portfolio_dashboard.html -->
 
 ## 📊 Project Outcomes — CRM Migration · Home Equity Bank
 
@@ -36,8 +18,9 @@ I put this portfolio together to share some of the BA work I do day to day — r
 | Lead response time | 48–72 hours | < 3 hours | ~96% faster |
 | Data entry error rate | ~30% | < 5% | ~87% reduction |
 | Lead conversion rate | ~12% | ~17–18% | ~50% improvement |
-| Manual reporting time | 4 hrs/week | 0 hrs/week | 100% automated |
+| Manual reporting time | 4 hrs/week per manager | 0 hrs/week | 100% automated |
 | Data quality score | ~70% | 96.2% | +37% improvement |
+| Records migrated | 0 | 48,847 | Zero data loss |
 | UAT pass rate | N/A | 93.2% | 4 defects resolved pre go-live |
 
 ---
@@ -56,74 +39,57 @@ I put this portfolio together to share some of the BA work I do day to day — r
 
 ## 🗓️ Project Timeline
 
-```
-Sep 2025          Oct 2025          Jan 2026          Feb 2026          Mar 2026
-    │                 │                 │                 │                 │
-[Initiation] ──► [BRD + FRD] ──► [Sprint 3*] ──► [Sprint 4] ──► [Sprint 5] ──► [GO-LIVE Mar 10]
-                               *Extended +8 days                  UAT 3 weeks    93.2% pass rate
-```
-
-| Phase | What I did | Outcome |
-|---|---|---|
-| Initiation | Stakeholder mapping, scope definition, project charter | 7 stakeholders identified, scope agreed |
-| BRD + FRD | Requirements workshops, gap analysis, data mapping | BRD v1.4 signed off after 2 revisions |
-| Sprint 3 | Data cleansing + migration load batch 1 | 31,000 records migrated cleanly |
-| Sprint 4 | Migration completion, validation, dashboard build | All 48,847 records confirmed in Salesforce |
-| Sprint 5 | UAT coordination, defect resolution, go-live prep | 93.2% pass rate, go-live approved Mar 6 |
-| Go-live | Production deployment, hypercare | 89% rep adoption on day 1 |
+| Phase | Period | What I Did | Outcome |
+|---|---|---|---|
+| Initiation | Sep 2025 | Stakeholder mapping, scope definition | 7 stakeholders aligned, scope agreed |
+| BRD + FRD | Oct 2025 | Requirements workshops, gap analysis, data mapping | BRD v1.4 signed off after 2 revisions |
+| Sprint 3 | Jan 2026 | Data cleansing + migration batch 1 | 31,000 records migrated — extended +8 days |
+| Sprint 4 | Feb 2026 | Migration completion, validation, dashboards | All 48,847 records confirmed in Salesforce |
+| Sprint 5 | Feb–Mar 2026 | UAT coordination, defect resolution | 93.2% pass rate, go-live approved Mar 6 |
+| Go-live | Mar 10, 2026 | Production deployment, hypercare | 89% rep adoption on day 1 |
 
 ---
 
 ## 👥 Stakeholder Map
 
-```
-                    ┌─────────────────────┐
-          ┌────────►│   Mohan Sarath      │◄────────┐
-          │         │   Senior BA         │         │
-          │         └─────────────────────┘         │
-          │           ▲    ▲    ▲    ▲              │
-     ┌────┴────┐  ┌───┘  ┌─┘  └─┐  └───┐  ┌───────┴──────┐
-     │ VP Sales│  │  PO  │      │  IT  │  │  Compliance  │
-     │ Sponsor │  │      │      │ Lead │  │   Officer    │
-     └─────────┘  └──────┘      └──────┘  └──────────────┘
-                            ▲
-                   ┌────────┴────────┐
-                   │  Data Governance│
-                   │  + ~115 Users   │
-                   └─────────────────┘
-```
+| Stakeholder | Role | Department | Key Priority |
+|---|---|---|---|
+| VP Sales | Project Sponsor | Sales | Speed, conversion rate, pipeline visibility |
+| Product Owner | Backlog Owner | Technology | Delivery timeline, sprint execution |
+| IT Lead | Technical Lead | Technology | System stability, integration design |
+| Data Governance Lead | Data Steward | Risk & Compliance | Data quality, audit trails |
+| Sales Managers x3 | Business Users | Sales | Dashboard visibility, team reporting |
+| Compliance Officer | Regulatory | Risk & Compliance | Access controls, PIPEDA compliance |
+| End Users ~115 | System Users | Sales & Operations | Ease of use, minimal disruption |
 
-**Key challenge:** Sales team wanted speed and simplicity. Compliance wanted audit trails and access controls. Took 2 additional JAD sessions to align both sides on the access control model before BRD sign-off.
+> **Key challenge:** Sales wanted speed and simplicity. Compliance wanted audit trails and access controls. Took 2 additional JAD sessions to align both sides before BRD sign-off.
 
 ---
 
 ## 🔄 Lead Management — AS-IS vs TO-BE
 
-### AS-IS (Before)
-```
-Campaign → Admin emails rep (24hr delay) → Rep enters spreadsheet (~30% errors) 
-→ Manager waits for Friday email → ~12% conversion rate
-```
+### ❌ AS-IS — Manual Process (Before)
 
-**Pain points identified in stakeholder workshops:**
-- No rules-based lead assignment — reps getting wrong leads
-- ~30% data entry error rate from manual spreadsheet entry
-- Zero real-time visibility for management
-- 4 hours/week wasted on manual reporting per manager
-- Leads going cold — no follow-up reminders
+| Step | Who | What Happened | Problem |
+|---|---|---|---|
+| 1 | Marketing | Generated leads from campaigns | Stored in separate spreadsheets |
+| 2 | Admin | Manually emailed leads to reps | Up to 24 hr delay, no rules |
+| 3 | Sales Rep | Entered data manually in Excel | ~30% error rate |
+| 4 | Sales Rep | Followed up based on own schedule | Leads going cold, no reminders |
+| 5 | Manager | Waited for Friday email report | No real-time visibility |
+| **Result** | | | **~12% conversion rate** |
 
-### TO-BE (After Salesforce)
-```
-Web form → Auto-captured in Salesforce → Validated at entry (<5% errors)
-→ Auto-assigned by territory rules (60 sec) → Rep notified instantly
-→ Follow-up task auto-created → Live dashboard for managers → ~17-18% conversion
-```
+### ✅ TO-BE — Salesforce Automated (After)
 
-**What changed:**
-- Lead response time: 48–72 hrs → under 3 hours
-- Assignment: manual email → rules-based automation in 60 seconds  
-- Reporting: Friday manual report → real-time Power BI dashboard
-- Data quality: ~70% → 96.2% post-migration
+| Step | Who | What Happens Now | Improvement |
+|---|---|---|---|
+| 1 | System | Web form auto-captures lead in Salesforce | Instant, no manual entry |
+| 2 | System | Validates all mandatory fields at entry | Error rate under 5% |
+| 3 | System | Auto-assigns by territory and product rules | Within 60 seconds |
+| 4 | Sales Rep | Receives instant email + in-app notification | Response time under 3 hrs |
+| 5 | System | Auto-creates follow-up task | No leads go cold |
+| 6 | Manager | Views live Power BI dashboard | Real-time visibility, no manual report |
+| **Result** | | | **~17–18% conversion rate** |
 
 ---
 
@@ -131,9 +97,9 @@ Web form → Auto-captured in Salesforce → Validated at entry (<5% errors)
 
 | Document | Phase | Description |
 |---|---|---|
-| [Project_Overview.md](./Project_Overview.md) | All phases | Full project background, challenges, and lessons learned |
+| [Project_Overview.md](./Project_Overview.md) | All phases | Full background, challenges, and lessons learned |
 | [BRD_CRM_Migration_HEB.md](./BRD_CRM_Migration_HEB.md) | Planning | Business requirements, stakeholder register, sign-off |
-| [FRD_Lead_Management_Salesforce.md](./FRD_Lead_Management_Salesforce.md) | Design | Functional specs, data mapping, field validation rules |
+| [FRD_Lead_Management_Salesforce.md](./FRD_Lead_Management_Salesforce.md) | Design | Functional specs, data mapping, field validation |
 | [User_Stories_Sprint3_to_5.md](./User_Stories_Sprint3_to_5.md) | Delivery | User stories, acceptance criteria, sprint notes |
 | [UAT_Results_CRM_Migration.md](./UAT_Results_CRM_Migration.md) | Testing | Test cases, defect log, stakeholder sign-off |
 | [SQL_Data_Validation_Migration.sql](./SQL_Data_Validation_Migration.sql) | Testing | SQL queries used for data profiling and validation |
